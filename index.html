@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script defer src="main.js"></script>
+    <title>Math Tutor</title>
+</head>
+<body>
+
+        <form class="operationsForm">
+            <fieldset>
+                <legend>Operation</legend>
+                <ul>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="addition">
+                            <input type="radio" id="addition" name="operation" value="A">
+                            Addition
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="subtraction">
+                            <input type="radio" id="subtraction" name="operation" value="S">
+                            Subtraction
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="multiplication">
+                            <input type="radio" id="multiplication" name="operation" value="M">
+                            Multiplication
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="division">
+                            <input type="radio" id="division" name="operation" value="D">
+                            Division
+                        </label>
+                    </div>
+                </ul>
+            </fieldset>
+        </form>
+    
+        <form class="difficultiesForm">
+            <fieldset>
+                <legend>Difficulty</legend>
+                <ul>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="level1">
+                            <input type="radio" id="level1" name="difficulty" value="1">
+                            Beginner
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="level2">
+                            <input type="radio" id="level2" name="difficulty" value="2">
+                            Intermediate
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <label for="level3">
+                            <input type="radio" id="level3" name="difficulty" value="3">
+                            Advanced
+                        </label>
+                    </div>
+                </ul>
+            </fieldset>
+        </form>
+
+        <button class="btn btn-primary" type="button" onclick="CheckAnswer()">Check Answer</button>
+        <button class="btn btn-primary" type="submit" onclick="GenerateProblem()">Generate Problem</button>
+
+        <p>Equation goes here</p>
+
+        <input type="text" id="answer" placeholder="Enter Answer">
+             
+        
+    
+</body>
+</html>
