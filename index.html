@@ -4,78 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script defer src="main.js"></script>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- <script defer src="main.js"></script> -->
     <title>Math Tutor</title>
+
+    <style>
+        form {
+            /* CSS basic box model */
+            /* ------------------- */
+            /* content-area */
+            width: 500px; 
+            /* padding area */
+            padding: 1em;
+            /* border area */
+            border: 1px solid #CCC;
+            border-radius: 1em;
+            /* margin area - center the form on the page  */
+            margin: 80px auto;
+        }
+    </style>
 </head>
-<body>
-
-        <form class="operationsForm">
-            <fieldset>
-                <legend>Operation</legend>
-                <ul>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="addition">
-                            <input type="radio" id="addition" name="operation" value="A">
-                            Addition
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="subtraction">
-                            <input type="radio" id="subtraction" name="operation" value="S">
-                            Subtraction
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="multiplication">
-                            <input type="radio" id="multiplication" name="operation" value="M">
-                            Multiplication
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="division">
-                            <input type="radio" id="division" name="operation" value="D">
-                            Division
-                        </label>
-                    </div>
-                </ul>
-            </fieldset>
-        </form>
-    
-        <form class="difficultiesForm">
-            <fieldset>
-                <legend>Difficulty</legend>
-                <ul>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="level1">
-                            <input type="radio" id="level1" name="difficulty" value="1">
-                            Beginner
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="level2">
-                            <input type="radio" id="level2" name="difficulty" value="2">
-                            Intermediate
-                        </label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <label for="level3">
-                            <input type="radio" id="level3" name="difficulty" value="3">
-                            Advanced
-                        </label>
-                    </div>
-                </ul>
-            </fieldset>
-        </form>
-
-        <button class="btn btn-primary" type="button" onclick="CheckAnswer()">Check Answer</button>
-        <button class="btn btn-primary" type="submit" onclick="GenerateProblem()">Generate Problem</button>
-
-        <p>Equation goes here</p>
-
-        <input type="text" id="answer" placeholder="Enter Answer">
-             
-        
-    
+<body>    
+    <!-- operations form -->
+    <form>
+        <fieldset>
+            <legend>Arithmetic Operation</legend>
+            <!-- addition label control -->
+            <label for="addition">
+                <input type="radio" name="operation" id="addition" value="add">
+                Addition
+            </label>
+            <!-- subtraction label control -->
+            <label for="subtraction">
+                <input type="radio" name="operation" id="subtraction" value="subtract">
+                Subtraction
+            </label>
+            <!-- multiplication label control -->
+            <label for="multiplication">
+                <input type="radio" name="operation" id="multiplication" value="multiply">
+                Multiplication
+            </label>
+            <!-- division label control -->
+            <label for="division">
+                <input type="radio" name="operation" id="division" value="divide">
+                Division
+            </label>
+        </fieldset>
+     </form>
 </body>
 </html>
