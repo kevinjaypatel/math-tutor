@@ -1,0 +1,22 @@
+form {
+/* CSS basic box model */
+  /* ------------------- */
+  /* content-area */
+  width: 500px; 
+  /* padding area */
+  padding: 1em;
+  /* border area */
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  margin: 5% auto; 
+}
+
+.operationsForm { 
+  /* margin area - center the form on the page  */
+  margin: 80px auto;
+}
+
+.levelsForm {
+  margin: 0 auto; 
+}
+

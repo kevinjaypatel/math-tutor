@@ -7,49 +7,63 @@
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <!-- <script defer src="main.js"></script> -->
     <title>Math Tutor</title>
-
-    <style>
-        form {
-            /* CSS basic box model */
-            /* ------------------- */
-            /* content-area */
-            width: 500px; 
-            /* padding area */
-            padding: 1em;
-            /* border area */
-            border: 1px solid #CCC;
-            border-radius: 1em;
-            /* margin area - center the form on the page  */
-            margin: 80px auto;
-        }
-    </style>
 </head>
 <body>    
-    <!-- operations form -->
-    <form>
-        <fieldset>
-            <legend>Arithmetic Operation</legend>
-            <!-- addition label control -->
-            <label for="addition">
-                <input type="radio" name="operation" id="addition" value="add">
-                Addition
-            </label>
-            <!-- subtraction label control -->
-            <label for="subtraction">
-                <input type="radio" name="operation" id="subtraction" value="subtract">
-                Subtraction
-            </label>
-            <!-- multiplication label control -->
-            <label for="multiplication">
-                <input type="radio" name="operation" id="multiplication" value="multiply">
-                Multiplication
-            </label>
-            <!-- division label control -->
-            <label for="division">
-                <input type="radio" name="operation" id="division" value="divide">
-                Division
-            </label>
-        </fieldset>
-     </form>
+    <header>
+
+    </header>
+
+    <main>
+        <!-- operations form -->
+        <form>
+            <fieldset>
+                <legend>Arithmetic Operation</legend>
+                <!-- 'addition' label control -->
+                <label for="addition">
+                    <input type="radio" name="operation" id="addition" value="add">
+                    Addition
+                </label>
+                <!-- 'subtraction' label control -->
+                <label for="subtraction">
+                    <input type="radio" name="operation" id="subtraction" value="subtract">
+                    Subtraction
+                </label>
+                <!-- 'multiplication' label control -->
+                <label for="multiplication">
+                    <input type="radio" name="operation" id="multiplication" value="multiply">
+                    Multiplication
+                </label>
+                <!-- 'division' label control -->
+                <label for="division">
+                    <input type="radio" name="operation" id="division" value="divide">
+                    Division
+                </label>
+            </fieldset>
+        </form>
+        <!-- levels form -->
+        <form>
+            <fieldset>
+                <legend>Difficulty Levels</legend>
+                <!-- 'level 1' label control -->
+                <label for="levelOne">
+                    <input type="radio" name="level" id="levelOne" value="easy">
+                    Beginner 
+                </label>
+                <!-- 'level2' label control -->
+                <label for="levelTwo">
+                    <input type="radio" name="level" id="levelTwo" value="medium">
+                    Intermediate
+                </label>
+                <!-- 'level3' label control -->
+                <label for="levelThree">
+                    <input type="radio" name="level" id="levelThree" value="hard">
+                    Advanced
+                </label>
+            </fieldset>
+        </form>
+    </main>
+    
+
+     
 </body>
 </html>
