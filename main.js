@@ -47,7 +47,9 @@ function GenerateEquation() {
             DisplayEquation(randLeft, randRight, '*'); 
             break;  
         case 'divide': 
-            result = randLeft > randRight ? (randLeft / randRight) : (randRight / randLeft); 
+            // terary operator syntax: variable name = <condition> ? <variable value if true> : <variable value if false>
+            result = Math.floor(randLeft > randRight ? randLeft / randRight : randRight / randLeft); 
+            console.log('division result: ' + result); 
             DisplayEquation(randLeft, randRight, '/'); 
     }
 }
@@ -56,18 +58,16 @@ function CheckAnswer() {
 
     if(answerCanBeChecked) {
         
-        if(parseInt(answer.value) === result || parseFloat(answer.value) === result) {
+        if(parseInt(answer.value) === result) {
             alert('Correct! Generating another problem'); 
             GenerateProblem(); 
         } else {
-            alert('result = ' + answer.value); 
             alert('Incorrect, try again!'); 
         }
         ResetUserAnswer(); 
 
     } else {
         alert('make sure an operation and difficulty level are selected'); 
-        console.log(answer.value); 
     }
 }
 
@@ -76,14 +76,19 @@ function ResetUserAnswer() {
 }
 
 function getRandomIntInclusive(min, max) {
-    
     // the max and min are inclusive 
     return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
 
-function DisplayEquation(leftNum, rightNum, arithmetic) {
-    equation.textContent = leftNum + " " + arithmetic + " " + rightNum; 
+function DisplayEquation(leftNumber, rightNumber, arithmeticSymbol) {
+    // display the greater number on the left hand side for division 
+    if(leftNumber < rightNumber) {
+        equation.textContent = rightNumber + " " + arithmeticSymbol + " " + leftNumber; 
+    } else {
+        equation.textContent = leftNumber + " " + arithmeticSymbol + " " + rightNumber; 
+    }
+    
 }
 
 function GetOperation() {
