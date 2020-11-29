@@ -1,9 +1,9 @@
 // selected radio buttons 
-let checkedOperation = null;
-let checkedDifficulty = null;
+let typeOfOperation = null;
+let typeOfDifficulty = null;
 
 // variable for checking if input is provided
-let isValid; 
+let answerCanBeChecked = false; 
 
 // reference to where the problem is presented
 const equation = document.querySelector('p'); 
@@ -11,46 +11,50 @@ const equation = document.querySelector('p');
 // reference to user input for the answer
 const answer = document.querySelector('#answer'); 
 
-// answer for the problem
+// answer for the problem, set to 0 by defualt
 let result = 0; 
 
 function GenerateProblem() { 
     GetOperation(); 
     GetDifficulty(); 
-    if(isValid){
+    if(answerCanBeChecked){
         GenerateEquation();  
     }
 }
 
 function GenerateEquation() {
     
-    let max = Math.pow(10, checkedDifficulty); 
-    let min = Math.pow(10, checkedDifficulty - 1);
-    
+    // get max and min values depending on level of difficulty 
+    let max = Math.pow(10, typeOfDifficulty); 
+    let min = Math.pow(10, typeOfDifficulty - 1);
+     
+    // generate a random value for the left and right side 
+    // of an operation 
     let randLeft = getRandomIntInclusive(min, max);
     let randRight = getRandomIntInclusive(min, max);  
-    
-    switch(checkedOperation){
-        case 'A':
+
+    switch(typeOfOperation){
+        case 'add':
             result = randLeft + randRight; 
             DisplayEquation(randLeft, randRight, '+'); 
             break; 
-        case 'S': 
+        case 'subtract': 
             result = randLeft - randRight;
             DisplayEquation(randLeft, randRight, '-'); 
             break; 
-        case 'M':
+        case 'multiply':
             result = randLeft * randRight;
             DisplayEquation(randLeft, randRight, '*'); 
             break;  
-        case 'D': 
+        case 'divide': 
             result = randLeft > randRight ? (randLeft / randRight) : (randRight / randLeft); 
             DisplayEquation(randLeft, randRight, '/'); 
     }
 }
 
 function CheckAnswer() {
-    if(isValid) {
+
+    if(answerCanBeChecked) {
         
         if(parseInt(answer.value) === result || parseFloat(answer.value) === result) {
             alert('Correct! Generating another problem'); 
@@ -72,9 +76,9 @@ function ResetUserAnswer() {
 }
 
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+    
+    // the max and min are inclusive 
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
 
@@ -86,29 +90,29 @@ function GetOperation() {
     const operations = document.querySelectorAll('input[name="operation"]'); 
     for(const operation of operations){
         if(operation.checked){
-            checkedOperation = operation.value; 
+            typeOfOperation = operation.value; 
             break; 
         }
     } 
-    ValidateInput(checkedOperation); 
+    ValidateInput(typeOfOperation); 
 }
 
 function GetDifficulty() {
-    const difficulties = document.querySelectorAll('input[name="difficulty"]');
+    const difficulties = document.querySelectorAll('input[name="level"]');
     for(const difficulty of difficulties){
         if(difficulty.checked){
-            checkedDifficulty = difficulty.value; 
+            typeOfDifficulty = difficulty.value; 
             break; 
         }
     } 
-    ValidateInput(checkedDifficulty); 
+    ValidateInput(typeOfDifficulty); 
 }
  
-function ValidateInput(selectedValue){
+function ValidateInput(selectedValue) {
     if(selectedValue === null){
         alert('make sure an operation and difficulty level are selected'); 
-        isValid = false; 
+        answerCanBeChecked = false; 
     } else { 
-        isValid = true; 
+        answerCanBeChecked = true; 
     }
 }

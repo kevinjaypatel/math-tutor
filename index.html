@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <script defer src="main.js"></script> -->
+    <script defer src="main.js"></script>
     <title>Math Tutor</title>
 </head>
 <body>    
@@ -42,24 +42,24 @@
                     <!-- provide a caption for the fieldset -->
                     <legend>Difficulty Levels</legend>
                     
-                        <input type="radio" name="level" id="levelOne" value="easy">
+                        <input type="radio" name="level" id="levelOne" value="1">
                         <label for="levelOne">Beginner</label> 
                     
-                        <input type="radio" name="level" id="levelTwo" value="medium">
+                        <input type="radio" name="level" id="levelTwo" value="2">
                         <label for="levelTwo">Intermediate</label>
     
-                        <input type="radio" name="level" id="levelThree" value="hard">
+                        <input type="radio" name="level" id="levelThree" value="3">
                         <label for="levelThree">Advanced</label>
     
                 </fieldset>
             </form>
             <!-- checking answers and generating problems -->
             <div>
-                <button type="button"> 
+                <button type="button" onclick="GenerateProblem()"> 
                     Generate Problem
                 </button>
                 <br> <br>
-                <button type="button">
+                <button type="button" onclick="CheckAnswer()">
                     Check Answer
                 </button>
                 
