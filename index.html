@@ -4,66 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <!-- <script defer src="main.js"></script> -->
     <title>Math Tutor</title>
 </head>
 <body>    
-    <header>
-
-    </header>
-
-    <main>
-        <!-- operations form -->
-        <form class="operationsForm">
-            <fieldset>
-                <legend>Arithmetic Operation</legend>
-                <!-- 'addition' label control -->
-                <label for="addition">
-                    <input type="radio" name="operation" id="addition" value="add">
-                    Addition
-                </label>
-                <!-- 'subtraction' label control -->
-                <label for="subtraction">
-                    <input type="radio" name="operation" id="subtraction" value="subtract">
-                    Subtraction
-                </label>
-                <!-- 'multiplication' label control -->
-                <label for="multiplication">
-                    <input type="radio" name="operation" id="multiplication" value="multiply">
-                    Multiplication
-                </label>
-                <!-- 'division' label control -->
-                <label for="division">
-                    <input type="radio" name="operation" id="division" value="divide">
-                    Division
-                </label>
-            </fieldset>
-        </form>
-        <!-- levels form -->
-        <form class="levelsForm">
-            <fieldset>
-                <legend>Difficulty Levels</legend>
-                <!-- 'level 1' label control -->
-                <label for="levelOne">
-                    <input type="radio" name="level" id="levelOne" value="easy">
-                    Beginner 
-                </label>
-                <!-- 'level2' label control -->
-                <label for="levelTwo">
-                    <input type="radio" name="level" id="levelTwo" value="medium">
-                    Intermediate
-                </label>
-                <!-- 'level3' label control -->
-                <label for="levelThree">
-                    <input type="radio" name="level" id="levelThree" value="hard">
-                    Advanced
-                </label>
-            </fieldset>
-        </form>
-    </main>
+    <div class="outerMostBorder">
+        <header>
+            <h1 class="header">Math Tutoring Application</h1>
+        </header>
     
-
-     
+        <main>
+            <!-- operations form -->
+            <form>
+                <!-- group form elements using fieldset -->
+                <fieldset>
+                    <!-- provide a caption for the fieldset -->
+                    <legend>Arithmetic Operations</legend>
+                    
+                    <input type="radio" name="operation" id="addition" value="add">
+                    <label for="addition">Addition</label>
+                
+                    <input type="radio" name="operation" id="subtraction" value="subtract">
+                    <label for="subtraction">Subtraction</label>
+                
+                    <input type="radio" name="operation" id="multiplication" value="multiply">
+                    <label for="multiplication">Multiplication</label>
+                
+                    <input type="radio" name="operation" id="division" value="divide">
+                    <label for="division">Division</label>
+                    
+                </fieldset>
+            </form>
+            <!-- levels form -->
+            <form>
+                <!-- group form elements using fieldset -->
+                <fieldset>
+                    <!-- provide a caption for the fieldset -->
+                    <legend>Difficulty Levels</legend>
+                    
+                        <input type="radio" name="level" id="levelOne" value="easy">
+                        <label for="levelOne">Beginner</label> 
+                    
+                        <input type="radio" name="level" id="levelTwo" value="medium">
+                        <label for="levelTwo">Intermediate</label>
+    
+                        <input type="radio" name="level" id="levelThree" value="hard">
+                        <label for="levelThree">Advanced</label>
+    
+                </fieldset>
+            </form>
+            <!-- checking answers and generating problems -->
+            <div>
+                <button type="button"> 
+                    Generate Problem
+                </button>
+                <br> <br>
+                <button type="button">
+                    Check Answer
+                </button>
+                
+                <p class="equation">Equation Goes Here</p>
+        
+                <input class="answerTextBox" type="text" id="answer" placeholder="Enter Answer">
+            </div>
+        
+        </main>
+    </div>
+    
+    
 </body>
 </html>
