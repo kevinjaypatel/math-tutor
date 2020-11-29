@@ -1,5 +1,5 @@
 # Math Tutor
-This program is designed to help users practice their math skills in various levels of difficulty. 
+Front-end web application written in HTML, CSS, and JavaScript to help users practice their math skills. 
 
 ## Installation
 1. Clone the repository 
