@@ -92,7 +92,9 @@ function DisplayEquation(leftNumber, rightNumber, arithmeticSymbol) {
 }
 
 function GetOperation() {
+    // use the document to reference all input for arithmetic operations
     const operations = document.querySelectorAll('input[name="operation"]'); 
+    // loop through each of the operations and assign the one that was selected 
     for(const operation of operations){
         if(operation.checked){
             typeOfOperation = operation.value; 
@@ -103,7 +105,9 @@ function GetOperation() {
 }
 
 function GetDifficulty() {
+    // use the document to reference all input for difficulty level
     const difficulties = document.querySelectorAll('input[name="level"]');
+    // loop through each of the difficulty levels and assign the one that was selected 
     for(const difficulty of difficulties){
         if(difficulty.checked){
             typeOfDifficulty = difficulty.value; 
