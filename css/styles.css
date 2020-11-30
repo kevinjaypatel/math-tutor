@@ -56,7 +56,7 @@ button {
 }
 
 /* Responsive Design */
-@media only screen and (min-width: 800px) and (max-width: 960px) {
+@media only screen and (min-width: 800px) and (max-width: 1250px) {
 
   .outerMostBorder {
     padding: 1em; 
@@ -64,11 +64,10 @@ button {
     margin: 65px auto 0; 
     width: 65%;
   }
-  
 
   .equation {
     background-color: lightgray;
-    width: 37%;
+    width: 30%;
     border: 1px solid #000; 
     border-radius: 1em;
     margin: 20px auto; 
