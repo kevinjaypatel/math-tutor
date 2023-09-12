@@ -1,49 +1,76 @@
+html {
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
 body {
   /* font syntax: font: <font-size> <font-family> */
   font: 1em sans-serif; 
 }
 
-.outerMostBorder {
+#application {
+  width: 560px;
+  height: 580px;
+  margin: 6em auto;
   padding: 1em; 
-  border: 3px solid #000;
-  margin: 65px auto 0; 
-  width: 50%;
+  border: 3px solid #000; 
+  background-color: antiquewhite;
 }
 
-.header {
-  text-align: center;
-}
-
-form {
-  padding: 1em;
-  border-radius: 1em;
-  /* center the form element */
-  margin: 0 auto;
+.header{
   width: 500px;
+  height: 80px;
+  margin: 0 auto; 
+  padding: 20px 15px 15px; 
+  font-family: monospace;
 }
 
-fieldset {
-  text-align: center;
+.operations-form {
+  
 }
+
+.levels-form {
+  
+}
+
+.operations-form, .levels-form {
+  width: auto;
+  height: auto; 
+  padding: 1em;
+  margin: 0 auto; 
+}
+
 
 div {
-  padding: 1em;
+  padding: 0;
   /* border: 1px solid #555555; */
   /* center the form element */
-  margin: 10px auto;
+  margin: 0px auto;
   /* center the content */
   text-align: center;
 }
 
-button {
-  width: 20%;
+.generate-problem-button {
+  background-color: #51A0D5;
+}
+
+.check-answer-button {
+
+}
+
+.generate-problem-button, .check-answer-button {
+  width: 28%;
   padding: 5px;  
   box-sizing: border-box;
 }
 
 .equation {
   background-color: lightgray;
-  width: 20%;
+  width: 31%;
   border: 1px solid #000; 
   border-radius: 1em;
   margin: 20px auto; 
@@ -55,33 +82,97 @@ button {
   padding: 5px; 
 }
 
-/* Responsive Design */
-@media only screen and (min-width: 800px) and (max-width: 1250px) {
-
-  .outerMostBorder {
-    padding: 1em; 
-    border: 3px solid #000;
-    margin: 65px auto 0; 
-    width: 65%;
+@media (min-width: 768px) {
+  #application {
+    width: 35em; 
+    height: 35em; 
+    padding: 0;
+    margin: 3em auto;
   }
 
-  .equation {
-    background-color: lightgray;
-    width: 30%;
-    border: 1px solid #000; 
-    border-radius: 1em;
-    margin: 20px auto; 
-    padding: 5px;
-    box-sizing: border-box;  
+  .operations-fields, .levels-fields {
+    display: flex;
   }
 
-  button {
-    width: 30%;
-    padding: 5px;  
-    box-sizing: border-box;
+  .add-field-group, .sub-field-group {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .multiply-field-group, .divide-field-group {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .bottom-section {
+    margin-top: 2em;
   }
 
 }
+
+@media (max-width: 425px) {
+  #application {
+    width: auto; 
+    height: auto;
+    margin: auto;
+  }
+  
+  .header {
+    width: auto; 
+    height: auto;  
+    margin: 0 auto;
+    content: 'App';
+  }
+
+  .operations-form, .levels-form {
+    width: auto;
+    height: auto;
+    padding: 1em; 
+    margin: 0 auto;
+  }
+
+  .add-field-group, .sub-field-group {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .multiply-field-group, .divide-field-group {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .diff-one-field-group, .diff-two-field-group, .diff-three-field-group {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .generate-problem-button {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+  } 
+
+  .check-answer-button {
+    width: auto;
+    height: auto;
+  }
+  
+  .equation {
+    width: 10em;
+    height: auto;
+  }
+}
+
 
 
 
