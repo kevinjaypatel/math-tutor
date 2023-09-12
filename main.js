@@ -79,7 +79,13 @@ function CheckAnswer() {
     } else {
         alert('make sure an operation and difficulty level are selected'); 
     }
-        
+}
+
+function CheckAnswer(event) {
+    var keyCode = event.keyCode; 
+    if (keyCode == 13) {
+        alert("Enter key was pressed"); 
+    }
 }
 
 function ResetUserAnswer() {
@@ -132,3 +138,6 @@ function ValidateInput(selectedValue) {
         inputChecked = true; 
     }
 }
+
+const mediaQueryList = window.matchMedia("(orientation: portrait)");
+
