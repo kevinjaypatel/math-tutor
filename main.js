@@ -81,13 +81,6 @@ function CheckAnswer() {
     }
 }
 
-function CheckAnswer(event) {
-    var keyCode = event.keyCode; 
-    if (keyCode == 13) {
-        alert("Enter key was pressed"); 
-    }
-}
-
 function ResetUserAnswer() {
     answer.value = ""; 
     // allow cursor to remain activated 
